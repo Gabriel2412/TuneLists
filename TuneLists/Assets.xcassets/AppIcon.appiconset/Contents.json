@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -12,6 +13,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "Gemini_Generated_Image_qpohgxqpohgxqpoh.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -23,56 +25,67 @@
           "value" : "tinted"
         }
       ],
+      "filename" : "Gemini_Generated_Image_r85x5lr85x5lr85x.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 9.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 8.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 7.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 6.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
+      "filename" : "AppIcon128x128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 5.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "128x128"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 4.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "256x256"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 3.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 2.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
+      "filename" : "Gemini_Generated_Image_1trw4i1trw4i1trw 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"

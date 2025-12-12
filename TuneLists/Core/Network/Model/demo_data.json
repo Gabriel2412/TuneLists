@@ -1,0 +1,106 @@
+{
+  "artists": [
+    {
+      "id": "artist_metallica",
+      "name": "Metallica",
+      "songs": [
+        { "id": "song_enter_sandman", "name": "Enter Sandman", "lengthInSeconds": 331 },
+        { "id": "song_nothing_else_matters", "name": "Nothing Else Matters", "lengthInSeconds": 388 },
+        { "id": "song_master_of_puppets", "name": "Master of Puppets", "lengthInSeconds": 515 },
+        { "id": "song_the_unforgiven", "name": "The Unforgiven", "lengthInSeconds": 386 },
+        { "id": "song_sad_but_true", "name": "Sad But True", "lengthInSeconds": 324 }
+      ]
+    },
+    {
+      "id": "artist_iron_maiden",
+      "name": "Iron Maiden",
+      "songs": [
+        { "id": "song_the_trooper", "name": "The Trooper", "lengthInSeconds": 244 },
+        { "id": "song_fear_of_the_dark", "name": "Fear of the Dark", "lengthInSeconds": 438 },
+        { "id": "song_run_to_the_hills", "name": "Run to the Hills", "lengthInSeconds": 228 },
+        { "id": "song_wasted_years", "name": "Wasted Years", "lengthInSeconds": 307 },
+        { "id": "song_hallowed_be_thy_name", "name": "Hallowed Be Thy Name", "lengthInSeconds": 430 }
+      ]
+    },
+    {
+      "id": "artist_slipknot",
+      "name": "Slipknot",
+      "songs": [
+        { "id": "song_duality", "name": "Duality", "lengthInSeconds": 252 },
+        { "id": "song_psychosocial", "name": "Psychosocial", "lengthInSeconds": 286 },
+        { "id": "song_before_i_forget", "name": "Before I Forget", "lengthInSeconds": 285 },
+        { "id": "song_wait_and_bleed", "name": "Wait and Bleed", "lengthInSeconds": 152 },
+        { "id": "song_snuff", "name": "Snuff", "lengthInSeconds": 270 }
+      ]
+    },
+    {
+      "id": "artist_system_of_a_down",
+      "name": "System of a Down",
+      "songs": [
+        { "id": "song_chop_suey", "name": "Chop Suey!", "lengthInSeconds": 210 },
+        { "id": "song_aerials", "name": "Aerials", "lengthInSeconds": 239 },
+        { "id": "song_toxicity", "name": "Toxicity", "lengthInSeconds": 219 },
+        { "id": "song_byob", "name": "BYOB", "lengthInSeconds": 266 },
+        { "id": "song_lonely_day", "name": "Lonely Day", "lengthInSeconds": 146 }
+      ]
+    },
+    {
+      "id": "artist_rammstein",
+      "name": "Rammstein",
+      "songs": [
+        { "id": "song_du_hast", "name": "Du Hast", "lengthInSeconds": 215 },
+        { "id": "song_sonne", "name": "Sonne", "lengthInSeconds": 268 },
+        { "id": "song_ich_will", "name": "Ich Will", "lengthInSeconds": 212 },
+        { "id": "song_engel", "name": "Engel", "lengthInSeconds": 266 },
+        { "id": "song_feuer_frei", "name": "Feuer Frei!", "lengthInSeconds": 192 }
+      ]
+    }
+  ],
+  "playlists": [
+    {
+      "id": "playlist_metal_essentials",
+      "coverImageUrlString": "https://media.istockphoto.com/id/1449836337/vector/vintage-styled-illustration-of-the-skull-with-rock-music-themed-tattoos-on-it-for-t-shirt.jpg",
+      "name": "Metal Essentials",
+      "rating": 5,
+      "createdAt": "2025-01-01T10:00:00Z",
+      "updatedAt": "2025-01-01T10:00:00Z",
+      "songs": ["song_enter_sandman", "song_the_trooper", "song_duality", "song_chop_suey", "song_du_hast"]
+    },
+    {
+      "id": "playlist_classic_heavy",
+      "name": "Classic Heavy",
+      "coverImageUrlString" : "https://i.pinimg.com/564x/b8/6b/9a/b86b9a455a7a28a884bb54c7b7797da2.jpg",
+      "rating": 4,
+      "createdAt": "2025-01-02T10:00:00Z",
+      "updatedAt": "2025-01-02T10:00:00Z",
+      "songs": ["song_master_of_puppets", "song_hallowed_be_thy_name", "song_aerials", "song_sonne", "song_psychosocial"]
+    },
+    {
+      "id": "playlist_fast_aggressive",
+      "name": "Fast & Aggressive",
+      "rating": 5,
+      "coverImageUrlString": "https://pics.craiyon.com/2023-08-30/b7f267649ad643af8cc0e87429eb8ee2.webp",
+      "createdAt": "2025-01-03T10:00:00Z",
+      "updatedAt": "2025-01-03T10:00:00Z",
+      "songs": ["song_run_to_the_hills", "song_byob", "song_wait_and_bleed", "song_feuer_frei", "song_sad_but_true"]
+    },
+    {
+      "id": "playlist_melodic_metal",
+      "name": "Melodic Metal",
+      "coverImageUrlString": "https://img.freepik.com/free-psd/flat-design-music-template_23-2150063940.jpg?semt=ais_hybrid&w=740&q=80",
+      "rating": 3,
+      "createdAt": "2025-01-04T10:00:00Z",
+      "updatedAt": "2025-01-04T10:00:00Z",
+      "songs": ["song_nothing_else_matters", "song_snuff", "song_lonely_day", "song_engel", "song_fear_of_the_dark"]
+    },
+    {
+      "id": "playlist_modern_metal_mix",
+      "name": "Modern Metal Mix",
+      "coverImageUrlString": "https://www.groundguitar.com/wp-content/uploads/2024/02/Best-Album-Covers-of-All-Time-1024x768.jpg",
+      "rating": 4,
+      "createdAt": "2025-01-05T10:00:00Z",
+      "updatedAt": "2025-01-05T10:00:00Z",
+      "songs": ["song_the_unforgiven", "song_wasted_years", "song_aerials", "song_ich_will", "song_before_i_forget"]
+    }
+  ]
+}
