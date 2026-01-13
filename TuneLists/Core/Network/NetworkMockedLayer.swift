@@ -8,6 +8,7 @@
 import Foundation
 
 class NetworkMockedLayer: NetworkLayerProtocol {
+    
     func deletePlaylist(_ playlist: PlayList) async throws {
         print("Pretending we delete the playlist on server....")
     }
@@ -22,5 +23,22 @@ class NetworkMockedLayer: NetworkLayerProtocol {
         return try Data(contentsOf: Bundle.main.url(forResource: "demo_data", withExtension: "json")!)
     }
     
+    func saveNewPlaylist(title: String) async throws -> Data {
+        let now = Date()
+        let formatter = ISO8601DateFormatter()
+        let isoString = formatter.string(from: now)
+        
+        let jsonDictionary: [[String : Any]] = [[
+            "id": UUID().uuidString,
+            "coverImageUrlString": "",
+            "name": title,
+            "rating": 0,
+            "createdAt": isoString,
+            "updatedAt": isoString,
+            "songs" : []
+            
+        ]]
+        return try JSONSerialization.data(withJSONObject: jsonDictionary, options: .prettyPrinted)
+    }
     
 }

@@ -51,7 +51,33 @@ struct PersistenceController {
         }
     }
     
-    func insert(jsonData: Data) async throws {
+    func insertPlaylist(jsonData: Data) async throws {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        let payload = try decoder.decode([PlaylistJSON].self, from: jsonData)
+        
+        
+        await container.performBackgroundTask { context in
+            
+            context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+            context.automaticallyMergesChangesFromParent = true
+            do {
+                print("🔄 Starting Import...")
+                try PlayList.importData(from: payload, in: context)
+                print("✅ Imported \(String(describing: payload.first?.name)) .")
+                
+                
+                if context.hasChanges {
+                    try context.save()
+                    print("💾 Saved to Database.")
+                }
+            } catch {
+                print("❌ Import Failed: \(error)")
+            }
+        }
+    }
+    
+    func insertServerData(jsonData: Data) async throws {
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
@@ -86,8 +112,15 @@ struct PersistenceController {
     }
     
     func deletePlaylist(_ playlist: PlayList) async throws {
-        container.viewContext.delete(playlist)
-        try container.viewContext.save()
+        try await container.performBackgroundTask { context in
+            context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+            context.automaticallyMergesChangesFromParent = true
+            
+            let contextPlaylist = context.object(with: playlist.objectID)
+            
+            context.delete(contextPlaylist)
+            try context.save()
+        }
     }
 }
 // MARK: - Preview Setup

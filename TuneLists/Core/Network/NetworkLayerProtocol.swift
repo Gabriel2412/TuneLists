@@ -12,4 +12,5 @@ protocol NetworkLayerProtocol {
     func fetchPlayLists()  async throws -> Data
     func saveNewPlaylist(_ playlist: PlayList) async throws
     func deletePlaylist(_ playlist: PlayList) async throws
+    func saveNewPlaylist(title: String) async throws -> Data
 }

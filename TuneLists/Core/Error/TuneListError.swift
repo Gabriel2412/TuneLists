@@ -19,6 +19,10 @@ struct TuneListError: Error, Identifiable, Equatable {
         return TuneListError(localizedDescription: "Failed to sync with server", iconName: "wifi.slash")
     }
     
+    static var newPlaylistFailed: TuneListError {
+        return TuneListError(localizedDescription: "Failed to create new playlist", iconName: "pencil.slash")
+    }
+    
     static func == (lhs: TuneListError, rhs: TuneListError) -> Bool {
         return lhs.id == rhs.id
     }

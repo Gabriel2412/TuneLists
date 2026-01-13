@@ -15,7 +15,7 @@ struct PlayListView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \PlayList.createdAt, ascending: true)],
         animation: .default)
     private var playlists: FetchedResults<PlayList>
-
+    @State private var loading: Bool = false
     var body: some View {
         Group {
             #if os(iOS) && !targetEnvironment(macCatalyst)
@@ -37,16 +37,12 @@ struct PlayListView: View {
             }
             #endif
         }
-        .overlay {
-            ErrorToastListView()
-        }
         .task {
             do {
                 try await tuneListService?.syncPlayLists()
             } catch {
                 errorService?.showError(TuneListError.syncFailed)
             }
-            
         }
     }
 
@@ -68,6 +64,29 @@ struct PlayListView: View {
         }
         .animation(.default, value: playlists.count) // Due CoreData FetchedResults not being equatable, we can use the list change, as this animation is for the deletion.
         .navigationTitle("PlayLists")
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    Task {
+                        do {
+                            loading = true
+                            try await Task.sleep(for: .seconds(2))
+                            try await tuneListService?.saveNewPlaylist(title: "New Playlist")
+                        } catch {
+                            print(error)
+                            errorService?.showError(TuneListError.newPlaylistFailed)
+                        }
+                        loading = false
+                    }
+                } label: {
+                    if !loading {
+                        Label("New PlayList" , systemImage: "plus")
+                    } else {
+                        ProgressView()
+                    }
+                }
+            }
+        }
     }
         
     private func deleteItems(offsets: IndexSet) async {
